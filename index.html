@@ -61,12 +61,18 @@
     <section class="mt-5">
         <h4 class="text-center text-dark">Answers of bonus part questions</h4>
         <div class="container mt-3">
-            <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="row row-cols-1 row-cols-md-2 g-4">
                 <div class="col">
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">How does JavaScript work?</h5>
-                            <p class="card-text"></p>
+                            <p class="card-text">JavaScript is based on ECMA262 and it's just-in-time compiled language.
+                                First of all, we write JavaScript as human reading formate then the JavaScript engines
+                                (V8, Spidermonkey, chakra) the code into machine code(1 and 0). But it's a
+                                single-threaded language, so it compiles one command at a time. When we run a program it
+                                keeps all the commands in the stack heap and executes them one by one. When multiple
+                                commands are given it stores them in an event loop and uses a call back function to run
+                                them.</p>
                         </div>
                     </div>
                 </div>
@@ -74,15 +80,13 @@
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">What does JavaScript event loop do?</h5>
-                            <p class="card-text"></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Local storage and Session storage difference</h5>
-                            <p class="card-text"></p>
+                            <p class="card-text">We know that the JavaScript code command is executed one at a time by a
+                                single thread. So when a program is running and it passes multiple commands javascript
+                                will work on the first command first and keep all other commands in a FIFO event queue.
+                                When the first command is done compiling it will take the next command from the event
+                                queue until it's empty. But if there is an asynchronous event it will keep it aside and
+                                work on the current command. When all the task is complete then it will call the
+                                remaining asynchronous event by call back function.</p>
                         </div>
                     </div>
                 </div>
